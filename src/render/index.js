@@ -1,4 +1,4 @@
-import {parser} from "../parser"
+import {parser} from "../parser/index.js"
 
 export const render = (view = [], renderTo = document.body, options = {}) => {
     let html, renderPoint

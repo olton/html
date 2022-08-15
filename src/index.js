@@ -1,8 +1,8 @@
-import BaseElement from "./elements/core/base"
-import Tag from "./elements/core/tag"
-import TagEmpty from "./elements/core/tag-empty"
-import {render} from "./render"
-import {router, Router} from "./router"
+import BaseElement from "./elements/core/base.js"
+import Tag from "./elements/core/tag.js"
+import TagEmpty from "./elements/core/tag-empty.js"
+import {render} from "./render/index.js"
+import {router, Router} from "./router/index.js"
 
 export {
     BaseElement,

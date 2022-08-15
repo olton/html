@@ -1,11 +1,11 @@
-import BaseElement from "./elements/core/base"
-import Tag from "./elements/core/tag"
-import TagEmpty from "./elements/core/tag-empty"
-import * as renders from "./render"
-import * as styleRoutines from "./style"
-import * as html_elements from "./elements"
-import * as loaders from "./loaders"
-import * as router from "./router"
+import BaseElement from "./elements/core/base.js"
+import Tag from "./elements/core/tag.js"
+import TagEmpty from "./elements/core/tag-empty.js"
+import * as renders from "./render/index.js"
+import * as styleRoutines from "./style/index.js"
+import * as html_elements from "./elements/index.js"
+import * as loaders from "./loaders/index.js"
+import * as router from "./router/index.js"
 
 globalThis.html = {
     BaseElement,

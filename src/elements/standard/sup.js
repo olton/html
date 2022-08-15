@@ -1,4 +1,4 @@
-import Tag from "../core/tag";
+import Tag from "../core/tag.js";
 
 export class Sup extends Tag {
     tag = 'sup'

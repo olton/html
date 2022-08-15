@@ -1,4 +1,4 @@
-import BaseElement from "./base";
+import BaseElement from "./base.js";
 
 export default class TagEmpty extends BaseElement {
     constructor(options = {}) {

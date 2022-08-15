@@ -1,5 +1,5 @@
-import Tag from "../core/tag"
-import {render} from "../../render";
+import Tag from "../core/tag.js"
+import {render} from "../../render/index.js";
 
 export class Title extends Tag {
     tag = 'title'

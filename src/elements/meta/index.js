@@ -1,5 +1,5 @@
-import TagEmpty from "../core/tag-empty"
-import {render} from "../../render";
+import TagEmpty from "../core/tag-empty.js"
+import {render} from "../../render/index.js";
 
 export class Meta extends TagEmpty {
     tag = 'meta'

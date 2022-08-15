@@ -1,8 +1,9 @@
 {
   "name": "@olton/html",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Create HTML pages in JavaScript! Including all standard components, and a Router for creating SPA.",
-  "main": "dist/html.js",
+  "main": "src/index.js",
+  "source": "src/index.js",
   "type": "module",
   "scripts": {
     "prebuild": "shx rm -rf dist/* lib/*",
@@ -25,16 +26,10 @@
   "author": "Serhii Pimenov <serhii@pimenov.com.ua> (https://pimenov.com.ua/)",
   "license": "MIT",
   "browserslist": [
-    "last 2 versions",
-    "not ie >= 0",
-    "not ie_mob >= 0",
-    "not op_mini all",
-    "not op_mob >= 0",
-    "not kaios >= 0",
-    "not samsung >= 0",
-    "not baidu >= 0",
-    "not bb >= 0",
-    "maintained node versions"
+    "last 1 Chrome versions",
+    "last 1 Firefox versions",
+    "last 1 Opera versions",
+    "last 1 Edge versions"
   ],
   "devDependencies": {
     "@babel/cli": "^7.14.8",

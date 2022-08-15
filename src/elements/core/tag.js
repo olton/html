@@ -1,5 +1,5 @@
-import {parser} from "../../parser"
-import BaseElement from "./base";
+import {parser} from "../../parser/index.js"
+import BaseElement from "./base.js";
 
 export default class Tag extends BaseElement {
     constructor(children = '', options = {}) {

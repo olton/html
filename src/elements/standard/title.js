@@ -1,4 +1,4 @@
-import Tag from "../core/tag";
+import Tag from "../core/tag.js";
 
 export class Heading extends Tag {
     constructor(tag = 'h1', children = '', options = {}) {

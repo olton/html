@@ -1,5 +1,5 @@
-import Tag from "../core/tag"
-import {dashedName} from "../../common/dashed-name";
+import Tag from "../core/tag.js"
+import {dashedName} from "../../common/dashed-name.js";
 
 export class CssGrid extends Tag {
     constructor(children = '', options = {}) {

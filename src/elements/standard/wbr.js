@@ -1,4 +1,4 @@
-import TagEmpty from "../core/tag-empty";
+import TagEmpty from "../core/tag-empty.js";
 
 export class Wbr extends TagEmpty {
     tag = 'wbr'

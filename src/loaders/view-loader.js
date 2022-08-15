@@ -21,7 +21,9 @@ export const viewLoader = async (path, options = {}, storage = false) => {
         }
     }
 
-    eval(`result = ${textNode}`)
+    const eval2 = eval
+
+    eval2(`result = ${textNode}`)
 
     return typeof result === "function" ? result() : result
 }

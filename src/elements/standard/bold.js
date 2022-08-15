@@ -1,4 +1,4 @@
-import Tag from "../core/tag";
+import Tag from "../core/tag.js";
 
 export class Bold extends Tag {
     tag = 'b'

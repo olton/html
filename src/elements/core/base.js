@@ -1,7 +1,7 @@
-import {dashedName} from "../../common/dashed-name";
-import {setClasses} from "../../common/set-classes";
-import {setStyles} from "../../common/set-styles";
-import {universalAttributes} from "../../helpers/universal-attributes"
+import {dashedName} from "../../common/dashed-name.js";
+import {setClasses} from "../../common/set-classes.js";
+import {setStyles} from "../../common/set-styles.js";
+import {universalAttributes} from "../../helpers/universal-attributes.js"
 
 export default class BaseElement {
     constructor(options = {}) {

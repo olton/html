@@ -1,4 +1,4 @@
-import TagEmpty from "../core/tag-empty";
+import TagEmpty from "../core/tag-empty.js";
 
 export class Input extends TagEmpty {
     tag = "input"

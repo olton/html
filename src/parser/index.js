@@ -1,5 +1,3 @@
-import BaseElement from "../elements/core/base"
-
 export const parser = element => {
     if (Array.isArray(element)) {
         return element.map( parser ).join("")

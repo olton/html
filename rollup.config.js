@@ -1,6 +1,4 @@
 import { terser } from 'rollup-plugin-terser'
-import { babel } from '@rollup/plugin-babel'
-import commonjs from '@rollup/plugin-commonjs'
 import glob from 'glob'
 
 function getI18N() {
@@ -19,14 +17,14 @@ export default [
         input: 'src/browser.js',
         output: [
             {
-                file: 'lib/datetime.js',
+                file: 'lib/html.js',
                 format: 'iife',
                 name: "",
                 plugins: [
                 ]
             },
             {
-                file: 'lib/datetime.min.js',
+                file: 'lib/html.min.js',
                 format: 'iife',
                 name: "",
                 plugins: [
@@ -34,31 +32,5 @@ export default [
                 ]
             }
         ]
-    },
-    {
-        input: 'src/index.js',
-        output: [
-            {
-                file: 'dist/datetime.js',
-                format: 'esm',
-            }
-        ],
-        plugins: [
-            commonjs(),
-            babel({ babelHelpers: 'bundled' })
-        ]
-    },
-    {
-        input: getI18N(),
-        output: {
-            dir: 'dist/i18n',
-            format: 'esm',
-            chunkFileNames: '[name].js',
-            exports: "default"
-        },
-        plugins: [
-            babel({ babelHelpers: 'bundled' }),
-            commonjs()
-        ],
     }
 ]

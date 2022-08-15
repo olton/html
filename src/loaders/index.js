@@ -1,6 +1,6 @@
-import {cssLoader} from "./css-loader"
-import {jsLoader} from "./js-loader"
-import {viewLoader, clearViewStorageHolder} from "./view-loader"
+import {cssLoader} from "./css-loader.js"
+import {jsLoader} from "./js-loader.js"
+import {viewLoader, clearViewStorageHolder} from "./view-loader.js"
 
 export {
     cssLoader,

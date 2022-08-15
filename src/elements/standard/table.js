@@ -1,5 +1,5 @@
-import Tag from "../core/tag";
-import TagEmpty from "../core/tag-empty";
+import Tag from "../core/tag.js";
+import TagEmpty from "../core/tag-empty.js";
 
 export class Table extends Tag {
     tag = 'table'

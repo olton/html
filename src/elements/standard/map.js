@@ -1,5 +1,5 @@
-import Tag from "../core/tag";
-import TagEmpty from "../core/tag-empty";
+import Tag from "../core/tag.js";
+import TagEmpty from "../core/tag-empty.js";
 
 export class Map extends Tag {
     tag = 'map'
