@@ -1,14 +1,14 @@
 {
   "name": "@olton/html",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Create HTML pages in JavaScript! Including all standard components, and a Router for creating SPA.",
-  "main": "src/index.js",
-  "source": "src/index.js",
+  "main": "src/html.cjs.js",
+  "module": "src/html.es.js",
   "type": "module",
   "scripts": {
     "prebuild": "shx rm -rf dist/* lib/*",
-    "build": "rollup --config",
-    "test": "jest"
+    "build": "cross-env MODE=production rollup -c",
+    "dev": "cross-env MODE=development rollup -c"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,20 @@
   },
   "author": "Serhii Pimenov <serhii@pimenov.com.ua> (https://pimenov.com.ua/)",
   "license": "MIT",
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "serhii@pimenov.com.ua"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/metroui"
+    },
+    {
+      "type": "subscription",
+      "url": "https://korzh.com/metroui#licensing"
+    }
+  ],
   "browserslist": [
     "last 1 Chrome versions",
     "last 1 Firefox versions",
@@ -32,18 +46,9 @@
     "last 1 Edge versions"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
-    "@babel/plugin-proposal-throw-expressions": "^7.14.5",
-    "@babel/preset-env": "^7.15.0",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^20.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "chai": "^4.3.4",
-    "glob": "^7.1.7",
-    "jest": "^27.1.0",
-    "rollup": "^2.56.3",
-    "rollup-plugin-terser": "^7.0.2",
-    "shx": "^0.3.3"
+    "@rollup/plugin-terser": "^0.4.4",
+    "cross-env": "^7.0.3",
+    "rollup": "^4.17.2",
+    "shx": "^0.3.4"
   }
 }

@@ -22,7 +22,7 @@ globalThis.__htmlSaver = {}
 
 globalThis.html.extract = (ctx = globalThis) => {
     for (let key in globalThis.html) {
-        globalThis.__htmlSaver[key] = globalThis[key]
+        if (globalThis[key]) globalThis.__htmlSaver[key] = globalThis[key]
         ctx[key] = globalThis.html[key]
     }
 }

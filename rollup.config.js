@@ -1,36 +1,37 @@
-import { terser } from 'rollup-plugin-terser'
-import glob from 'glob'
+import terser from '@rollup/plugin-terser'
 
-function getI18N() {
-    return glob.sync('src/*/*.js', {
-        ignore: [
-            'src/core/*.js',
-            'src/plugins/*.js',
-            'src/helpers/*.js',
-            'src/*.js',
-        ],
-    });
-}
+const production = (process.env.MODE === 'production')
 
 export default [
     {
-        input: 'src/browser.js',
-        output: [
-            {
-                file: 'lib/html.js',
-                format: 'iife',
-                name: "",
-                plugins: [
-                ]
-            },
-            {
-                file: 'lib/html.min.js',
-                format: 'iife',
-                name: "",
-                plugins: [
-                    terser()
-                ]
-            }
-        ]
-    }
-]
+        input: './src/browser.js',
+        watch: { clearScreen: false },
+        output: {
+            file: './lib/html.js',
+            format: 'iife',
+            sourcemap: false,
+            plugins: [
+                production && terser({
+                    keep_classnames: true,
+                    keep_fnames: true,
+                })
+            ],
+        }
+    },
+    {
+        input: './src/index.js',
+        watch: { clearScreen: false },
+        output: {
+            file: './dist/html.es.js',
+            format: 'es',
+        }
+    },
+    {
+        input: './src/index.js',
+        watch: { clearScreen: false },
+        output: {
+            file: './dist/html.cjs.js',
+            format: 'cjs',
+        }
+    },
+];
