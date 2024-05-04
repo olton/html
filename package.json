@@ -1,14 +1,15 @@
 {
   "name": "@olton/html",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Create HTML pages in JavaScript! Including all standard components, and a Router for creating SPA.",
-  "main": "src/html.cjs.js",
-  "module": "src/html.es.js",
+  "main": "dist/html.cjs.js",
+  "module": "dist/html.es.js",
   "type": "module",
   "scripts": {
     "prebuild": "shx rm -rf dist/* lib/*",
     "build": "cross-env MODE=production rollup -c",
-    "dev": "cross-env MODE=development rollup -c"
+    "dev": "cross-env MODE=development rollup -c",
+    "pub": "npm publish --access public"
   },
   "repository": {
     "type": "git",
