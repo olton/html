@@ -9,6 +9,14 @@ import * as Elements from "./elements/index.js"
 
 const __htmlSaver = {}
 
+const version = "0.8.0"
+const build_time = "08.05.2024, 13:24:07"
+
+const info = () => {
+    console.info(`%c HtmlJS %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")
+}
+
+
 const extract = (ctx = globalThis) => {
     for (let key in Elements) {
         if (globalThis[key]) __htmlSaver[key] = globalThis[key]
@@ -25,7 +33,8 @@ const restore = (ctx = globalThis) => {
 const html = {
     ...Elements,
     extract,
-    restore
+    restore,
+    info
 }
 
 export {
@@ -37,6 +46,6 @@ export {
     Router,
     addStyle, addCssRule, createStyleSheet, createStyleElement,
     cssLoader, viewLoader, clearViewStorageHolder, jsLoader,
-    html
+    html,
 }
 

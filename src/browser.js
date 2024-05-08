@@ -7,6 +7,13 @@ import * as html_elements from "./elements/index.js"
 import * as loaders from "./loaders/index.js"
 import * as router from "./router/index.js"
 
+const version = "0.8.0"
+const build_time = "08.05.2024, 13:24:07"
+
+const info = () => {
+    console.info(`%c HtmlJS %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")
+}
+
 globalThis.html = {
     BaseElement,
     Tag,
@@ -33,4 +40,4 @@ globalThis.html.restore = (ctx = globalThis) => {
     }
 }
 
-
+info()
