@@ -52,8 +52,6 @@ export default class BaseElement {
         const {data = {}} = this.options
         let _ = []
 
-        if (data === {}) return ""
-
         for(let key in data) {
             _.push(`data-${dashedName(key)}="${data[key]}"`)
         }
@@ -65,8 +63,6 @@ export default class BaseElement {
         const {aria = {}} = this.options
         let _ = []
 
-        if (aria === {}) return ""
-
         for(let key in aria) {
             _.push(`aria-${key.toLowerCase()}="${aria[key]}"`)
         }
@@ -77,8 +73,6 @@ export default class BaseElement {
     get events(){
         const {events = {}} = this.options
         let eventsArray = []
-
-        if (events === {}) return ""
 
         for(let key in events) {
             eventsArray.push(`${key.toLowerCase()}="${events[key]}"`)
