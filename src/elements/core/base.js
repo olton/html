@@ -91,8 +91,7 @@ export default class BaseElement {
     }
 
     get styles(){
-        const {style = {}} = this.options
-        return setStyles(style)
+        return setStyles(this.options.style)
     }
 
     template(){

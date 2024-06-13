@@ -8,7 +8,7 @@ import * as Elements from "./elements"
 const __htmlSaver = {}
 
 const version = "0.10.0"
-const build_time = "13.06.2024, 16:08:48"
+const build_time = "13.06.2024, 16:25:30"
 
 const info = () => {
     console.info(`%c HtmlJS %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")

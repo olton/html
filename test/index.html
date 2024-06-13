@@ -19,6 +19,11 @@
                 label("Label", {class: "class1"}),
                 input({type: "text", value:"123", data:{role: "input"}}),
                 hr(),
+                div(
+                    button("Ok", {events: {onclick: "alert('Click Button')"}}),
+                    button("Cancel", {type: "button"}),
+                    {class: "actions"}
+                )
             )
         )
     })())
