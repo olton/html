@@ -8,5 +8,4 @@ export class AudioTag extends Tag {
     }
 }
 
-export const audio = (children = '', options = {}) => new AudioTag(children, options)
-export const audio2 = (src = '', children = '', options = {}) => new AudioTag(children, {...options, src})
+export const audio = (...args) => new AudioTag(...args)

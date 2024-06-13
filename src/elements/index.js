@@ -1,9 +1,14 @@
+import {html, Html} from "./standard/html.js";
+import {head, Head} from "./standard/head.js";
+import {base, Base} from "./standard/base.js";
+import {link, Link} from "./standard/link.js";
+import {body, Body} from "./standard/body.js";
 import {span, Span} from "./standard/span.js"
-import {Img, img, img2} from "./standard/Image.js"
-import {input, Input, input2} from "./standard/input.js"
+import {Img, img} from "./standard/Image.js"
+import {input, Input} from "./standard/input.js"
 import {br, Br} from "./standard/br.js"
 import {hr, Hr} from "./standard/hr.js"
-import {heading, Heading, h1, h2, h3, h4, h5, h6} from "./standard/title.js"
+import {heading, Heading, h1, h2, h3, h4, h5, h6} from "./standard/heading.js"
 import {section, Section} from "./standard/section.js"
 import {anchor, a, Anchor} from "./standard/anchor.js"
 import {abbr, Abbr} from "./standard/abbr.js"
@@ -13,8 +18,8 @@ import {aside, Aside} from "./standard/aside.js"
 import {header, Header} from "./standard/header.js"
 import {footer, Footer} from "./standard/footer.js"
 import {address, Address} from "./standard/address.js"
-import {map, Map, area, Area, area2} from "./standard/map.js"
-import {audio, audio2, AudioTag} from "./standard/audio.js"
+import {map, Map, area, Area} from "./standard/map.js"
+import {audio, AudioTag} from "./standard/audio.js"
 import {bold, Bold} from "./standard/bold.js"
 import {bdi, Bdi} from "./standard/bdi.js"
 import {bdo, Bdo} from "./standard/bdo.js"
@@ -35,11 +40,11 @@ import {embed, Embed, noembed, NoEmbed} from "./standard/embed.js"
 import {fieldset, Fieldset, legend, Legend} from "./standard/fieldset.js"
 import {figure, Figure, figcaption, FigCaption} from "./standard/figure.js"
 import {form, Form} from "./standard/form.js"
-import {frameset, Frameset, frame, frame2, Frame, noframes, NoFrames} from "./standard/frame.js"
-import {iframe, IFrame, iframe2} from "./standard/iframe.js"
+import {frameset, Frameset, frame, Frame, noframes, NoFrames} from "./standard/frame.js"
+import {iframe, IFrame} from "./standard/iframe.js"
 import {ins, Ins} from "./standard/ins.js"
 import {kbd, Kbd} from "./standard/kbd.js"
-import {label, label2, Label} from "./standard/label.js"
+import {label, Label} from "./standard/label.js"
 import {ul, ol, li, List, ListItem} from "./standard/list.js"
 import {mark, Mark} from "./standard/mark.js"
 import {noscript, NoScript} from "./standard/noscript.js"
@@ -47,36 +52,39 @@ import {select, Select, OptionGroup, optgroup, Option, option} from "./standard/
 import {output, Output} from "./standard/output.js"
 import {p, Paragraph, paragraph} from "./standard/paragraph.js"
 import {pre, Pre} from "./standard/pre.js"
-import {q, Quoted} from "./standard/q.js"
+import {q, quoted, Quoted} from "./standard/q.js"
 import {s, strike, Strike} from "./standard/strike.js"
-import {script, Script, script2} from "./standard/script.js"
+import {script, Script} from "./standard/script.js"
 import {small, Small} from "./standard/small.js"
-import {source, Source, source2} from "./standard/source.js"
+import {source, Source} from "./standard/source.js"
 import {sub, Sub} from "./standard/sub.js"
 import {sup, Sup} from "./standard/sup.js"
 import {textarea, Textarea} from "./standard/textarea.js"
 import {time, Time} from "./standard/time.js"
-import {track, Track, track2} from "./standard/track.js"
+import {track, Track} from "./standard/track.js"
 import {variable, Var} from "./standard/var.js"
-import {video, VideoTag, video2} from "./standard/video.js"
+import {video, VideoTag} from "./standard/video.js"
 import {wbr, Wbr} from "./standard/wbr.js"
 import {main, Main} from "./standard/main.js"
-
-import {flexbox, Flexbox} from "./extended/flexbox.js"
-import {margin, Margin} from "./extended/margin.js"
-import {padding, Padding} from "./extended/padding.js"
-import {center, Center} from "./extended/center.js"
-import {figureSimple, FigureSimple} from "./extended/figure.js"
-import {cssGrid, CssGrid, cssGridItem, CssGridItem} from "./extended/grid.js"
-
-import {meta, Meta, addMeta} from "./meta/index.js"
-import {title, Title, addTitle} from "./title/index.js"
+import {meta, Meta} from "./standard/meta.js"
+import {title, Title} from "./standard/title.js"
+import {template, Template} from "./standard/template.js";
+import {ruby, Ruby, rt, Rt, rp, Rp} from "./standard/ruby.js";
+import {data, Data} from "./standard/data.js";
+import {picture, Picture} from "./standard/picture.js";
+import {dialog, Dialog} from "./standard/dialog.js";
+import {slot, Slot} from "./standard/slot.js";
 
 export {
+    html, Html,
+    head, Head,
+    base, Base,
+    link, Link,
+    body, Body,
     br, Br, hr, Hr,
     span, Span,
-    Img, img, img2,
-    Input, input, input2,
+    Img, img,
+    Input, input,
     heading, Heading, h1, h2, h3, h4, h5, h6,
     section, Section,
     anchor, a, Anchor,
@@ -87,8 +95,8 @@ export {
     header, Header,
     footer, Footer,
     address, Address,
-    map, Map, area, Area, area2,
-    audio, audio2, AudioTag,
+    map, Map, area, Area,
+    audio, AudioTag,
     bold, Bold,
     bdi, Bdi,
     bdo, Bdo,
@@ -109,11 +117,11 @@ export {
     fieldset, Fieldset, legend, Legend,
     figure, Figure, figcaption, FigCaption,
     form, Form,
-    frame, frame2, frameset, Frame, Frameset, noframes, NoFrames,
-    iframe, IFrame, iframe2,
+    frame, frameset, Frame, Frameset, noframes, NoFrames,
+    iframe, IFrame,
     ins, Ins,
     kbd, Kbd,
-    label, label2, Label,
+    label, Label,
     ul, ol, li, List, ListItem,
     mark, Mark,
     noscript, NoScript,
@@ -121,28 +129,26 @@ export {
     output, Output,
     p, Paragraph, paragraph,
     pre, Pre,
-    q, Quoted,
+    q, quoted, Quoted,
     s, strike, Strike,
-    script, Script, script2,
+    script, Script,
     small, Small,
-    source, Source, source2,
+    source, Source,
     sub, Sub,
     sup, Sup,
     textarea, Textarea,
     time, Time,
-    track, Track, track2,
+    track, Track,
     variable, Var,
-    video, VideoTag, video2,
+    video, VideoTag,
     wbr, Wbr,
     main, Main,
-
-    flexbox, Flexbox,
-    margin, Margin,
-    padding, Padding,
-    center, Center,
-    figureSimple, FigureSimple,
-    cssGrid, CssGrid, cssGridItem, CssGridItem,
-
-    meta, Meta, addMeta,
-    title, Title, addTitle
+    meta, Meta,
+    title, Title,
+    template, Template,
+    ruby, Ruby, rt, Rt, rp, Rp,
+    data, Data,
+    picture, Picture,
+    dialog, Dialog,
+    slot, Slot,
 }

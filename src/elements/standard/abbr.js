@@ -4,4 +4,4 @@ export class Abbr extends Tag {
     tag = "abbr"
 }
 
-export const abbr = (children = '', options = {}) => new Abbr(children, options)
+export const abbr = (...args) => new Abbr(...args)

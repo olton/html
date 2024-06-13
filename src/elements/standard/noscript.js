@@ -4,4 +4,4 @@ export class NoScript extends Tag {
     tag = 'noscript'
 }
 
-export const noscript = (children = '', options = {}) => new NoScript(children, options)
+export const noscript = (...args) => new NoScript(...args)

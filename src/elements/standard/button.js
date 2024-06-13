@@ -8,4 +8,4 @@ export class Button extends Tag {
     }
 }
 
-export const button = (children = '', options = {}) => new Button(children, options)
+export const button = (...args) => new Button(...args)

@@ -8,4 +8,4 @@ export class Blockquote extends Tag {
     }
 }
 
-export const blockquote = (children = '', options = {}) => new Blockquote(children, options)
+export const blockquote = (...args) => new Blockquote(...args)

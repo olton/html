@@ -4,4 +4,4 @@ export class Main extends Tag {
     tag = 'main'
 }
 
-export const main = (children = '', options = {}) => new Main(children, options)
+export const main = (...args) => new Main(...args)

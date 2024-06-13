@@ -1,6 +1,6 @@
 import BaseElement from "./base.js";
 
-export default class TagEmpty extends BaseElement {
+export default class SingleTag extends BaseElement {
     constructor(options = {}) {
         super(options)
         this.options = options

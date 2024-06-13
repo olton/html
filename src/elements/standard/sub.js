@@ -4,4 +4,4 @@ export class Sub extends Tag {
     tag = 'sub'
 }
 
-export const sub = (children = '', options = {}) => new Sub(children, options)
+export const sub = (...args) => new Sub(...args)

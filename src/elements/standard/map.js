@@ -1,5 +1,5 @@
 import Tag from "../core/tag.js";
-import TagEmpty from "../core/tag-empty.js";
+import SingleTag from "../core/single-tag.js";
 
 export class Map extends Tag {
     tag = 'map'
@@ -9,9 +9,9 @@ export class Map extends Tag {
     }
 }
 
-export const map = (children = '', options = {}) => new Map(children, options)
+export const map = (...args) => new Map(...args)
 
-export class Area extends TagEmpty {
+export class Area extends SingleTag {
     tag = 'area'
 
     selfAttributes() {
@@ -20,4 +20,3 @@ export class Area extends TagEmpty {
 }
 
 export const area = (options = {}) => new Area(options)
-export const area2 = (href = '#', options = {}) => area({...options, href})

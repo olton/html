@@ -4,4 +4,4 @@ export class Dfn extends Tag {
     tag = 'dfn'
 }
 
-export const dfn = (children = '', options = {}) => new Dfn(children, options)
+export const dfn = (...args) => new Dfn(...args)

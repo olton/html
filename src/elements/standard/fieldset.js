@@ -8,7 +8,7 @@ export class Fieldset extends Tag {
     }
 }
 
-export const fieldset = (children = '', options = {}) => new Fieldset(children, options)
+export const fieldset = (...args) => new Fieldset(...args)
 
 export class Legend extends Tag {
     tag = 'legend'
@@ -18,4 +18,4 @@ export class Legend extends Tag {
     }
 }
 
-export const legend = (children = '', options = {}) => new Legend(children, options)
+export const legend = (...args) => new Legend(...args)

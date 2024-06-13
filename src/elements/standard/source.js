@@ -1,6 +1,6 @@
-import TagEmpty from "../core/tag-empty.js";
+import SingleTag from "../core/single-tag.js";
 
-export class Source extends TagEmpty {
+export class Source extends SingleTag {
     tag = 'source'
 
     selfAttributes() {
@@ -9,4 +9,3 @@ export class Source extends TagEmpty {
 }
 
 export const source = (options = {}) => new Source(options)
-export const source2 = (src = '', options = {}) => source({...options, src})

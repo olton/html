@@ -8,5 +8,4 @@ export class IFrame extends Tag {
     }
 }
 
-export const iframe = (children = '', options = {}) => new IFrame(children, options)
-export const iframe2 = (src = '', name = '', children = '', options = {}) => new IFrame(children, {...options, src, name})
+export const iframe = (...args) => new IFrame(...args)

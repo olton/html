@@ -8,7 +8,7 @@ export class Select extends Tag {
     }
 }
 
-export const select = (children = '', options = {}) => new Select(children, options)
+export const select = (...args) => new Select(...args)
 
 export class OptionGroup extends Tag {
     tag = 'optgroup'
@@ -18,7 +18,7 @@ export class OptionGroup extends Tag {
     }
 }
 
-export const optgroup = (children = '', options = {}) => new OptionGroup(children, options)
+export const optgroup = (...args) => new OptionGroup(...args)
 
 export class Option extends Tag {
     tag = 'option'
@@ -28,5 +28,5 @@ export class Option extends Tag {
     }
 }
 
-export const option = (value = '', children = '', options = {}) => new Option(value, children, options)
+export const option = (...args) => new Option(...args)
 

@@ -4,4 +4,4 @@ export class Datalist extends Tag {
     tag = 'datalist'
 }
 
-export const datalist = (children = '', options = {}) => new Datalist(children, options)
+export const datalist = (...args) => new Datalist(...args)

@@ -8,4 +8,4 @@ export class Canvas extends Tag {
     }
 }
 
-export const canvas = (children = '', options = {}) => new Canvas(children, options)
+export const canvas = (...args) => new Canvas(...args)

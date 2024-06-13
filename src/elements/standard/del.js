@@ -8,4 +8,4 @@ export class Del extends Tag {
     }
 }
 
-export const del = (children = '', options = {}) => new Del(children, options)
+export const del = (...args) => new Del(...args)

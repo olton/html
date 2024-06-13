@@ -4,4 +4,4 @@ export class Mark extends Tag {
     tag = 'mark'
 }
 
-export const mark = (children = '', options = {}) => new Mark(children, options)
+export const mark = (...args) => new Mark(...args)

@@ -4,4 +4,4 @@ export class Span extends Tag {
     tag = 'span'
 }
 
-export const span = (children = '', options = {}) => new Span(children, options)
+export const span = (...args) => new Span(...args)

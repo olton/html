@@ -8,10 +8,10 @@ export class Embed extends Tag {
     }
 }
 
-export const embed = (children = '', options = {}) => new Embed(children, options)
+export const embed = (...args) => new Embed(...args)
 
 export class NoEmbed extends Tag {
     tag = 'noembed'
 }
 
-export const noembed = (children = '', options = {}) => new NoEmbed(children, options)
+export const noembed = (...args) => new NoEmbed(...args)

@@ -8,5 +8,5 @@ export class Quoted extends Tag {
     }
 }
 
-export const q = (children = '', options = {}) => new Quoted(children, options)
-export const quoted = (children = '', options = {}) => new Quoted(children, options)
+export const q = (...args) => new Quoted(...args)
+export const quoted = (...args) => new Quoted(...args)

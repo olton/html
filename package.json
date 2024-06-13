@@ -1,9 +1,8 @@
 {
   "name": "@olton/html",
-  "version": "0.8.1",
+  "version": "0.10.0",
   "description": "Create HTML pages in JavaScript! Including all standard components, and a Router for creating SPA.",
-  "main": "dist/html.cjs.js",
-  "module": "dist/html.es.js",
+  "main": "dist/html.esm.js",
   "type": "module",
   "files": [
     "dist"
@@ -12,6 +11,7 @@
     "prebuild": "shx rm -rf dist/* lib/*",
     "build": "cross-env MODE=production rollup -c",
     "dev": "cross-env MODE=development rollup -c",
+    "watch": "cross-env MODE=development rollup -c -w",
     "pub": "npm publish --access public"
   },
   "repository": {
@@ -50,9 +50,10 @@
     "last 1 Edge versions"
   ],
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "cross-env": "^7.0.3",
-    "rollup": "^4.17.2",
+    "rollup": "^4.18.0",
     "shx": "^0.3.4"
   }
 }

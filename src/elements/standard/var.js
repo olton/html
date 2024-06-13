@@ -4,4 +4,4 @@ export class Var extends Tag {
     tag = 'var'
 }
 
-export const variable = (children = '', options = {}) => new Var(children, options)
+export const variable = (...args) => new Var(...args)

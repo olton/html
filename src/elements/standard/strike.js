@@ -4,5 +4,5 @@ export class Strike extends Tag {
     tag = 'strike'
 }
 
-export const strike = (children = '', options = {}) => new Strike(children, options)
-export const s = (children = '', options = {}) => new Strike(children, options)
+export const strike = (...args) => new Strike(...args)
+export const s = (...args) => new Strike(...args)

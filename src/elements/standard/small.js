@@ -4,4 +4,4 @@ export class Small extends Tag {
     tag = 'small'
 }
 
-export const small = (children = '', options = {}) => new Small(children, options)
+export const small = (...args) => new Small(...args)

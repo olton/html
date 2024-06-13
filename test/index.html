@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="../lib/html.js"></script>
 </head>
 <body>
-<script src="../lib/html.js"></script>
+
+<script>
+    ((() => {
+        htmljs.extract()
+        const body = document.querySelector("body")
+        const root = document.createElement("main")
+        body.appendChild(root)
+        root.innerHTML = div(
+            h1("Header"),
+            form(
+                label("Label", {class: "class1"}),
+                input({type: "text", value:"123", data:{role: "input"}}),
+                hr(),
+            )
+        )
+    })())
+</script>
 </body>
 </html>

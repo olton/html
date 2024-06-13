@@ -1,4 +1,5 @@
 import terser from '@rollup/plugin-terser'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import fs from "node:fs"
 import pkg from "./package.json" assert {type: "json"}
 
@@ -29,6 +30,7 @@ export default [
     {
         input: './src/browser.js',
         watch: { clearScreen: false },
+        plugins: [nodeResolve()],
         output: {
             file: './lib/html.js',
             format: 'iife',
@@ -45,8 +47,9 @@ export default [
     {
         input: './src/index.js',
         watch: { clearScreen: false },
+        plugins: [nodeResolve()],
         output: {
-            file: './dist/html.es.js',
+            file: './dist/html.esm.js',
             format: 'es',
             banner,
         }
@@ -54,6 +57,7 @@ export default [
     {
         input: './src/index.js',
         watch: { clearScreen: false },
+        plugins: [nodeResolve()],
         output: {
             file: './dist/html.cjs.js',
             format: 'cjs',

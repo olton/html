@@ -12,6 +12,6 @@ export class Dd extends Tag {
     tag = 'dd'
 }
 
-export const dl = (children = '', options = {}) => new Dl(children, options)
-export const dt = (children = '', options = {}) => new Dt(children, options)
-export const dd = (children = '', options = {}) => new Dd(children, options)
+export const dl = (...args) => new Dl(...args)
+export const dt = (...args) => new Dt(...args)
+export const dd = (...args) => new Dd(...args)

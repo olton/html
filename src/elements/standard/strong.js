@@ -4,4 +4,4 @@ export class Strong extends Tag {
     tag = 'strong'
 }
 
-export const strong = (children = '', options = {}) => new Strong(children, options)
+export const strong = (...args) => new Strong(...args)

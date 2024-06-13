@@ -8,4 +8,4 @@ export class Div extends Tag {
     }
 }
 
-export const div = (children = '', options = {}) => new Div(children, options)
+export const div = (...args) => new Div(...args)

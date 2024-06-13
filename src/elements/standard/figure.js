@@ -4,11 +4,11 @@ export class Figure extends Tag {
     tag = 'figure'
 }
 
-export const figure = (children = '', options = {}) => new Figure(children, options)
+export const figure = (...args) => new Figure(...args)
 
 export class FigCaption extends Tag {
     tag = 'figcaption'
 }
 
-export const figcaption = (children = '', options = {}) => new FigCaption(children, options)
+export const figcaption = (...args) => new FigCaption(...args)
 

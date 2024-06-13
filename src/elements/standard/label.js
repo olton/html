@@ -8,5 +8,4 @@ export class Label extends Tag {
     }
 }
 
-export const label = (children = '', options = {}) => new Label(children, options)
-export const label2 = (_for = '', children = '', options = {}) => label(children, {...options, "for": _for})
+export const label = (...args) => new Label(...args)

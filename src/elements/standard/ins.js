@@ -8,4 +8,4 @@ export class Ins extends Tag {
     }
 }
 
-export const ins = (children = '', options = {}) => new Ins(children, options)
+export const ins = (...args) => new Ins(...args)

@@ -4,4 +4,4 @@ export class Code extends Tag {
     tag = 'code'
 }
 
-export const code = (children = '', options = {}) => new Code(children, options)
+export const code = (...args) => new Code(...args)

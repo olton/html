@@ -8,5 +8,4 @@ export class VideoTag extends Tag {
     }
 }
 
-export const video = (children = '', options = {}) => new VideoTag(children, options)
-export const video2 = (src = '', children = '', options = {}) => video(children, {...options, src})
+export const video = (...args) => new VideoTag(...args)

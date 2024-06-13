@@ -4,4 +4,4 @@ export class Em extends Tag {
     tag = 'em'
 }
 
-export const em = (children = '', options = {}) => new Em(children, options)
+export const em = (...args) => new Em(...args)

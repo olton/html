@@ -8,4 +8,4 @@ export class Textarea extends Tag {
     }
 }
 
-export const textarea = (children = '', options = {}) => new Textarea(children, options)
+export const textarea = (...args) => new Textarea(...args)

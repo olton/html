@@ -4,4 +4,4 @@ export class Kbd extends Tag {
     tag = 'kbd'
 }
 
-export const kbd = (children = '', options = {}) => new Kbd(children, options)
+export const kbd = (...args) => new Kbd(...args)

@@ -8,4 +8,4 @@ export class Form extends Tag {
     }
 }
 
-export const form = (children = '', options = {}) => new Form(children, options)
+export const form = (...args) => new Form(...args)

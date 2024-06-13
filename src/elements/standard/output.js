@@ -8,4 +8,4 @@ export class Output extends Tag {
     }
 }
 
-export const output = (children = '', options = {}) => new Output(children, options)
+export const output = (...args) => new Output(...args)

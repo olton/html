@@ -1,6 +1,6 @@
-import TagEmpty from "../core/tag-empty.js";
+import SingleTag from "../core/single-tag.js";
 
-export class Track extends TagEmpty {
+export class Track extends SingleTag {
     tag = 'track'
 
     selfAttributes() {
@@ -9,4 +9,3 @@ export class Track extends TagEmpty {
 }
 
 export const track = (options = {}) => new Track(options)
-export const track2 = (src = '', options = {}) => track({...options, src})

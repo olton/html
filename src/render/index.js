@@ -8,7 +8,7 @@ export const render = (view = [], renderTo = document.body, options = {}) => {
 
     renderPoint = typeof renderTo === "string" ? document.querySelector(renderTo) : renderTo
 
-    if (!renderPoint) {
+    if (!(renderPoint instanceof HTMLElement)) {
         renderPoint = document.body
     }
 

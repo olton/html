@@ -1,8 +1,8 @@
 import Tag from "../core/tag.js";
 
 export class List extends Tag {
-    constructor(tag = 'ul', children = '', options = {}) {
-        super(children, options);
+    constructor(tag = 'ul', ...args) {
+        super(...args);
         this.tag = tag
     }
 
@@ -21,6 +21,6 @@ export class ListItem extends Tag {
     }
 }
 
-export const ul = (children = '', options = {}) => new List('ul', children, options)
-export const ol = (children = '', options = {}) => new List('ol', children, options)
-export const li = (children = '', options = {}) => new ListItem(children, options)
+export const ul = (...args) => new List('ul', ...args)
+export const ol = (...args) => new List('ol', ...args)
+export const li = (...args) => new ListItem(...args)

@@ -1,5 +1,5 @@
 import Tag from "../core/tag.js";
-import TagEmpty from "../core/tag-empty.js";
+import SingleTag from "../core/single-tag.js";
 
 export class Table extends Tag {
     tag = 'table'
@@ -12,7 +12,7 @@ export class Table extends Tag {
     }
 }
 
-export const table = (children = '', options = {}) => new Table(children, options)
+export const table = (...args) => new Table(...args)
 
 export class Caption extends Tag {
     tag = 'caption'
@@ -22,9 +22,9 @@ export class Caption extends Tag {
     }
 }
 
-export const caption = (children = '', options = {}) => new Caption(children, options)
+export const caption = (...args) => new Caption(...args)
 
-export class Col extends TagEmpty {
+export class Col extends SingleTag {
     tag = 'col'
 
     selfAttributes() {
@@ -34,7 +34,7 @@ export class Col extends TagEmpty {
 
 export const col = options => new Col(options)
 
-export class Colgroup extends TagEmpty {
+export class Colgroup extends SingleTag {
     tag = 'colgroup'
 
     selfAttributes() {
@@ -45,8 +45,8 @@ export class Colgroup extends TagEmpty {
 export const colgroup = options => new Colgroup(options)
 
 export class TableSection extends Tag {
-    constructor(tag = 'tbody', children = '', options = {}) {
-        super(children, options)
+    constructor(tag = 'tbody', ...args) {
+        super(...args)
         this.tag = tag
     }
 
@@ -55,9 +55,9 @@ export class TableSection extends Tag {
     }
 }
 
-export const tbody = (children = '', options = {}) => new TableSection('tbody', children, options)
-export const thead = (children = '', options = {}) => new TableSection('thead', children, options)
-export const tfoot = (children = '', options = {}) => new TableSection('tfoot', children, options)
+export const tbody = (...args) => new TableSection('tbody', ...args)
+export const thead = (...args) => new TableSection('thead', ...args)
+export const tfoot = (...args) => new TableSection('tfoot', ...args)
 
 export class TableRow extends Tag {
     tag = "tr"
@@ -67,11 +67,11 @@ export class TableRow extends Tag {
     }
 }
 
-export const tr = (children = '', options = {}) => new TableRow(children, options)
+export const tr = (...args) => new TableRow(...args)
 
 export class TableCell extends Tag {
-    constructor(tag = 'td', children = '', options = {}) {
-        super(children, options)
+    constructor(tag = 'td', ...args) {
+        super(...args)
         this.tag = tag
     }
 
@@ -80,7 +80,7 @@ export class TableCell extends Tag {
     }
 }
 
-export const th = (children = '', options = {}) => new TableCell('th', children, options)
-export const td = (children = '', options = {}) => new TableCell('td', children, options)
+export const th = (...args) => new TableCell('th', ...args)
+export const td = (...args) => new TableCell('td', ...args)
 
 

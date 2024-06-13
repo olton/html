@@ -4,4 +4,4 @@ export class Section extends Tag {
     tag = 'section'
 }
 
-export const section = (children = '', options = {}) => new Section(children, options)
+export const section = (...args) => new Section(...args)

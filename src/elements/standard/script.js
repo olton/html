@@ -8,5 +8,4 @@ export class Script extends Tag {
     }
 }
 
-export const script = (children = '', options = {}) => new Script(children, options)
-export const script2 = (src = '', children = '', options = {}) => script(children, {...options, src})
+export const script = (...args) => new Script(...args)

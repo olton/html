@@ -1,5 +1,5 @@
 import Tag from "../core/tag.js";
-import TagEmpty from "../core/tag-empty.js";
+import SingleTag from "../core/single-tag.js";
 
 export class Frameset extends Tag {
     tag = 'frameset'
@@ -9,9 +9,9 @@ export class Frameset extends Tag {
     }
 }
 
-export const frameset = (children = '', options = {}) => new Frameset(children, options)
+export const frameset = (...args) => new Frameset(...args)
 
-export class Frame extends TagEmpty {
+export class Frame extends SingleTag {
     tag = 'frame'
 
     selfAttributes() {
@@ -20,11 +20,10 @@ export class Frame extends TagEmpty {
 }
 
 export const frame = (options = {}) => new Frame(options)
-export const frame2 = (src = '', name = '', options = {}) => new Frame({...options, src, name})
 
 export class NoFrames extends Tag {
     tag = 'noframes'
 }
 
-export const noframes = (children = '', options = {}) => new NoFrames(children, options)
+export const noframes = (...args) => new NoFrames(...args)
 

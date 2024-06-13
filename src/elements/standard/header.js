@@ -4,4 +4,4 @@ export class Header extends Tag {
     tag = 'header'
 }
 
-export const header = (children = '', options = {}) => new Header(children, options)
+export const header = (...args) => new Header(...args)

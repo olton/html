@@ -8,4 +8,4 @@ export class Time extends Tag {
     }
 }
 
-export const time = (children = '', options = {}) => new Time(children, options)
+export const time = (...args) => new Time(...args)

@@ -1,6 +1,6 @@
-import TagEmpty from "../core/tag-empty.js";
+import SingleTag from "../core/single-tag.js";
 
-export class Wbr extends TagEmpty {
+export class Wbr extends SingleTag {
     tag = 'wbr'
 }
 

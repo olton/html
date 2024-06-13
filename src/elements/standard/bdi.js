@@ -4,4 +4,4 @@ export class Bdi extends Tag {
     tag = 'bdi'
 }
 
-export const bdi = (children = '', options = {}) => new Bdi(children, options)
+export const bdi = (...args) => new Bdi(...args)

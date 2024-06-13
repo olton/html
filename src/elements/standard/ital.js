@@ -4,5 +4,5 @@ export class Ital extends Tag {
     tag = 'i'
 }
 
-export const ital = (children = '', options = {}) => new Ital(children, options)
-export const i = (children = '', options = {}) => new Ital(children, options)
+export const ital = (...args) => new Ital(...args)
+export const i = (...args) => new Ital(...args)

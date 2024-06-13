@@ -1,6 +1,6 @@
-import TagEmpty from "../core/tag-empty.js";
+import SingleTag from "../core/single-tag.js";
 
-export class Img extends TagEmpty {
+export class Img extends SingleTag {
     tag = 'img'
 
     selfAttributes() {
@@ -8,5 +8,4 @@ export class Img extends TagEmpty {
     }
 }
 
-export const img = (options = {}) => new Img(options)
-export const img2 = (src = '', alt = '', options = {}) => img({...options, src, alt})
+export const img = (src = '', alt = '', options = {}) => new Img({...options, src, alt})

@@ -4,4 +4,4 @@ export class Samp extends Tag {
     tag = 'samp'
 }
 
-export const samp = (children = '', options = {}) => new Samp(children, options)
+export const samp = (...args) => new Samp(...args)

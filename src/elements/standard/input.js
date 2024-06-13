@@ -1,6 +1,6 @@
-import TagEmpty from "../core/tag-empty.js";
+import SingleTag from "../core/single-tag.js";
 
-export class Input extends TagEmpty {
+export class Input extends SingleTag {
     tag = "input"
 
     selfAttributes() {
@@ -13,4 +13,3 @@ export class Input extends TagEmpty {
 }
 
 export const input = (options = {}) => new Input(options)
-export const input2 = (value = '', options = {}) => new Input({...options, value})

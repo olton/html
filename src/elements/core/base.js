@@ -1,7 +1,9 @@
-import {dashedName} from "../../common/dashed-name.js";
-import {setClasses} from "../../common/set-classes.js";
-import {setStyles} from "../../common/set-styles.js";
-import {universalAttributes} from "../../helpers/universal-attributes.js"
+import {dashedName} from "../../helpers/dashed-name.js";
+import {setClasses} from "../../helpers/set-classes.js";
+import {setStyles} from "../../helpers/set-styles.js";
+import {globalAttributes} from "../../helpers/global-attributes.js"
+import {htmlParser} from "../../helpers/html-parser.js";
+import {eventsList} from "../../helpers/events.js";
 
 export default class BaseElement {
     constructor(options = {}) {
@@ -31,7 +33,7 @@ export default class BaseElement {
                 continue
             }
 
-            if ( (this.selfAttributes().includes(key) && !attr.includes(key)) || universalAttributes.includes(key) ) {
+            if ( (this.selfAttributes().includes(key) && !attr.includes(key)) || globalAttributes.includes(key) ) {
                 attr.push(`${key}="${this.options[key]}"`)
             }
         }
@@ -71,10 +73,13 @@ export default class BaseElement {
     }
 
     get events(){
-        const {events = {}} = this.options
+        const {events = {}, control = true} = this.options
         let eventsArray = []
 
         for(let key in events) {
+            if (control && !eventsList.includes(key)) {
+                console.info(`Event ${key} for element ${this.tag} not specified in HTML specification`)
+            }
             eventsArray.push(`${key.toLowerCase()}="${events[key]}"`)
         }
 
@@ -82,8 +87,7 @@ export default class BaseElement {
     }
 
     get classes(){
-        const {className = []} = this.options
-        return setClasses(className)
+        return setClasses(this.options.class)
     }
 
     get styles(){
@@ -93,5 +97,13 @@ export default class BaseElement {
 
     template(){
         return ``
+    }
+
+    toString(){
+        return this.draw()
+    }
+
+    toElement(){
+        return htmlParser(this.draw())
     }
 }

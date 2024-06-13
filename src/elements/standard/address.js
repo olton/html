@@ -4,4 +4,4 @@ export class Address extends Tag {
     tag = 'address'
 }
 
-export const address = (children = '', options = {}) => new Address(children, options)
+export const address = (...args) => new Address(...args)

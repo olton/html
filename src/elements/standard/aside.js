@@ -4,4 +4,4 @@ export class Aside extends Tag {
     tag = 'aside'
 }
 
-export const aside = (children = '', options = {}) => new Aside(children, options)
+export const aside = (...args) => new Aside(...args)

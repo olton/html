@@ -2,7 +2,7 @@ export const viewLoader = async (path, options = {}, storage = false) => {
     let response, textNode, result = () => {}, storageKey
 
     if (storage !== false) {
-        storageKey = `htmljs::key::${path}`
+        storageKey = `html::key::${path}`
         textNode = localStorage.getItem(storageKey)
     }
 
@@ -28,4 +28,4 @@ export const viewLoader = async (path, options = {}, storage = false) => {
     return typeof result === "function" ? result() : result
 }
 
-export const clearViewStorageHolder = path => localStorage.removeItem(`htmljs::key::${path}`)
+export const clearViewStorageHolder = path => localStorage.removeItem(`html::key::${path}`)
