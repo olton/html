@@ -1,6 +1,6 @@
 {
   "name": "@olton/html",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Create HTML pages in JavaScript! Including all standard components, and a Router for creating SPA.",
   "main": "dist/html.esm.js",
   "type": "module",

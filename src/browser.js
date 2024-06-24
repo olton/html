@@ -5,8 +5,8 @@ import * as elements from "./elements"
 import * as loaders from "./loaders"
 import * as router from "./router"
 
-const version = "0.10.0"
-const build_time = "13.06.2024, 16:25:30"
+const version = "0.11.0"
+const build_time = "24.06.2024, 17:03:41"
 
 const info = () => {
     console.info(`%c HtmlJS %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")
