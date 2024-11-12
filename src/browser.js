@@ -3,10 +3,9 @@ import * as renders from "./render"
 import * as styleRoutines from "./style"
 import * as elements from "./elements"
 import * as loaders from "./loaders"
-import * as router from "./router"
 
-const version = "0.11.0"
-const build_time = "24.06.2024, 17:03:41"
+const version = "0.12.0"
+const build_time = "12.11.2024, 20:45:02"
 
 const info = () => {
     console.info(`%c HtmlJS %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")
@@ -20,7 +19,6 @@ globalThis.htmljs = {
     ...renders,
     ...loaders,
     ...styleRoutines,
-    ...router
 }
 
 globalThis.__htmlSaver = {}

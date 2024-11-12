@@ -1,17 +1,16 @@
 import {BaseElement, Tag, SingleTag} from "./elements/core"
 import {render} from "./render"
-import {router, Router} from "./router"
 import {addStyle, addCssRule, createStyleSheet, createStyleElement} from "./style"
 import {cssLoader, viewLoader, clearViewStorageHolder, jsLoader} from "./loaders"
 import * as Elements from "./elements"
 
 const __htmlSaver = {}
 
-const version = "0.11.0"
-const build_time = "24.06.2024, 17:03:41"
+const version = "0.12.0"
+const build_time = "12.11.2024, 20:45:02"
 
 const info = () => {
-    console.info(`%c HtmlJS %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")
+    console.info(`%c Html %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")
 }
 
 const extract = (ctx = globalThis) => {
@@ -39,8 +38,6 @@ export {
     Tag,
     SingleTag,
     render,
-    router,
-    Router,
     addStyle, addCssRule, createStyleSheet, createStyleElement,
     cssLoader, viewLoader, clearViewStorageHolder, jsLoader,
     htmljs,
