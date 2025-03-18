@@ -8,7 +8,15 @@ import {Img, img} from "./standard/Image.js"
 import {input, Input} from "./standard/input.js"
 import {br, Br} from "./standard/br.js"
 import {hr, Hr} from "./standard/hr.js"
-import {heading, Heading, h1, h2, h3, h4, h5, h6} from "./standard/heading.js"
+
+import {Heading} from "./standard/heading.js"
+import {h1} from "./standard/h1.js"
+import {h2} from "./standard/h2.js"
+import {h3} from "./standard/h3.js"
+import {h4} from "./standard/h4.js"
+import {h5} from "./standard/h5.js"
+import {h6} from "./standard/h6.js"
+
 import {section, Section} from "./standard/section.js"
 import {anchor, a, Anchor} from "./standard/anchor.js"
 import {abbr, Abbr} from "./standard/abbr.js"
@@ -20,7 +28,7 @@ import {footer, Footer} from "./standard/footer.js"
 import {address, Address} from "./standard/address.js"
 import {map, Map, area, Area} from "./standard/map.js"
 import {audio, AudioTag} from "./standard/audio.js"
-import {bold, Bold} from "./standard/bold.js"
+import {b, Bold} from "./standard/b.js"
 import {bdi, Bdi} from "./standard/bdi.js"
 import {bdo, Bdo} from "./standard/bdo.js"
 import {blockquote, Blockquote} from "./standard/blockquote.js"
@@ -38,19 +46,25 @@ import {ital, Ital, i} from "./standard/ital.js"
 import {strong, Strong} from "./standard/strong.js"
 import {embed, Embed, noembed, NoEmbed} from "./standard/embed.js"
 import {fieldset, Fieldset, legend, Legend} from "./standard/fieldset.js"
-import {figure, Figure, figcaption, FigCaption} from "./standard/figure.js"
+import {figure, Figure} from "./standard/figure.js"
+import {figcaption, FigCaption} from "./standard/figcaption.js"
 import {form, Form} from "./standard/form.js"
 import {frameset, Frameset, frame, Frame, noframes, NoFrames} from "./standard/frame.js"
 import {iframe, IFrame} from "./standard/iframe.js"
 import {ins, Ins} from "./standard/ins.js"
 import {kbd, Kbd} from "./standard/kbd.js"
 import {label, Label} from "./standard/label.js"
-import {ul, ol, li, List, ListItem} from "./standard/list.js"
+
+import {List, ListItem} from "./standard/list.js"
+import {ul} from "./standard/ul.js"
+import {ol} from "./standard/ol.js"
+import {li} from "./standard/li.js"
+
 import {mark, Mark} from "./standard/mark.js"
 import {noscript, NoScript} from "./standard/noscript.js"
 import {select, Select, OptionGroup, optgroup, Option, option} from "./standard/select.js"
 import {output, Output} from "./standard/output.js"
-import {p, Paragraph, paragraph} from "./standard/paragraph.js"
+import {p, Paragraph} from "./standard/p.js"
 import {pre, Pre} from "./standard/pre.js"
 import {q, quoted, Quoted} from "./standard/q.js"
 import {s, strike, Strike} from "./standard/strike.js"
@@ -85,7 +99,7 @@ export {
     span, Span,
     Img, img,
     Input, input,
-    heading, Heading, h1, h2, h3, h4, h5, h6,
+    Heading, h1, h2, h3, h4, h5, h6,
     section, Section,
     anchor, a, Anchor,
     abbr, Abbr,
@@ -97,7 +111,7 @@ export {
     address, Address,
     map, Map, area, Area,
     audio, AudioTag,
-    bold, Bold,
+    b, Bold,
     bdi, Bdi,
     bdo, Bdo,
     blockquote, Blockquote,
@@ -127,7 +141,7 @@ export {
     noscript, NoScript,
     select, Select, OptionGroup, optgroup, Option, option,
     output, Output,
-    p, Paragraph, paragraph,
+    p, Paragraph,
     pre, Pre,
     q, quoted, Quoted,
     s, strike, Strike,

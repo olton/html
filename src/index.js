@@ -1,16 +1,16 @@
-import {BaseElement, Tag, SingleTag} from "./elements/core"
-import {render} from "./render"
-import {addStyle, addCssRule, createStyleSheet, createStyleElement} from "./style"
-import {cssLoader, viewLoader, clearViewStorageHolder, jsLoader} from "./loaders"
-import * as Elements from "./elements"
+import {BaseElement, Tag, SingleTag} from "./elements/core/index.js"
+import {render} from "./render/index.js"
+import {addStyle, addCssRule, createStyleSheet, createStyleElement} from "./style/index.js"
+import {cssLoader, viewLoader, clearViewStorageHolder, jsLoader} from "./loaders/index.js"
+import * as Elements from "./elements/index.js"
 
 const __htmlSaver = {}
 
-const version = "0.12.0"
-const build_time = "12.11.2024, 20:45:02"
+const version = "__VERSION__"
+const build_time = "__BUILD_TIME__"
 
 const info = () => {
-    console.info(`%c Html %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")
+    console.info(`%c Html.js %c v${version} %c ${build_time} `, "color: #ffffff; font-weight: bold; background: #708238", "color: white; background: darkgreen", "color: white; background: #0080fe;")
 }
 
 const extract = (ctx = globalThis) => {
@@ -26,11 +26,10 @@ const restore = (ctx = globalThis) => {
     }
 }
 
-const htmljs = {
+const HTML = {
     ...Elements,
     extract,
     restore,
-    info
 }
 
 export {
@@ -40,6 +39,7 @@ export {
     render,
     addStyle, addCssRule, createStyleSheet, createStyleElement,
     cssLoader, viewLoader, clearViewStorageHolder, jsLoader,
-    htmljs,
+    HTML,
+    info
 }
 

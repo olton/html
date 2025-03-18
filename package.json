@@ -1,18 +1,18 @@
 {
   "name": "@olton/html",
-  "version": "0.12.0",
+  "version": "0.14.0",
   "description": "Create HTML pages in JavaScript! Including all standard components, and a Router for creating SPA.",
-  "main": "dist/html.esm.js",
+  "main": "dist/html.js",
   "type": "module",
   "files": [
     "dist"
   ],
   "scripts": {
     "prebuild": "shx rm -rf dist/* lib/*",
-    "build": "cross-env MODE=production rollup -c",
-    "dev": "cross-env MODE=development rollup -c",
-    "watch": "cross-env MODE=development rollup -c -w",
-    "pub": "npm publish --access public"
+    "build": "cross-env MODE=production node build.js",
+    "dev": "cross-env MODE=development node build.js",
+    "pub": "npm publish --access public",
+    "test": "latte -d --include='__tests__/*.test.js'"
   },
   "repository": {
     "type": "git",
@@ -44,16 +44,14 @@
     }
   ],
   "browserslist": [
-    "last 1 Chrome versions",
-    "last 1 Firefox versions",
-    "last 1 Opera versions",
-    "last 1 Edge versions"
+    "last 2 versions"
   ],
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@olton/esbuild-plugin-progress": "^0.3.0",
+    "@olton/latte": "^0.2.0",
     "cross-env": "^7.0.3",
-    "rollup": "^4.18.0",
+    "esbuild": "^0.25.1",
+    "esbuild-plugin-replace": "^1.4.0",
     "shx": "^0.3.4"
   }
 }

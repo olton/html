@@ -20,7 +20,3 @@ export class ListItem extends Tag {
         return ["type", "value"]
     }
 }
-
-export const ul = (...args) => new List('ul', ...args)
-export const ol = (...args) => new List('ol', ...args)
-export const li = (...args) => new ListItem(...args)

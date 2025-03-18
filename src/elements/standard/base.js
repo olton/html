@@ -1,4 +1,4 @@
-import {SingleTag} from "../core";
+import {SingleTag} from "../core/index.js";
 
 export class Base extends SingleTag {
     tag = 'base'

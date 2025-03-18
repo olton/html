@@ -8,5 +8,4 @@ export class Paragraph extends Tag {
     }
 }
 
-export const paragraph = (...args) => new Paragraph(...args)
 export const p = (...args) => new Paragraph(...args)
