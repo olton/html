@@ -5,14 +5,15 @@
   "main": "dist/html.js",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "prebuild": "shx rm -rf dist/* lib/*",
-    "build": "cross-env MODE=production node build.js",
+    "build": "npm run clean && cross-env MODE=production node build.js",
     "dev": "cross-env MODE=development node build.js",
-    "pub": "npm publish --access public",
-    "test": "latte -d --include='__tests__/*.test.js'"
+    "pub": "npm run build && npm publish --access public",
+    "test": "latte --dom"
   },
   "repository": {
     "type": "git",
@@ -48,10 +49,10 @@
   ],
   "devDependencies": {
     "@olton/esbuild-plugin-progress": "^0.3.0",
-    "@olton/latte": "^0.2.0",
+    "@olton/latte": "^0.13.0",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.25.1",
+    "esbuild": "^0.25.3",
     "esbuild-plugin-replace": "^1.4.0",
-    "shx": "^0.3.4"
+    "shx": "^0.4.0"
   }
 }
