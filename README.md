@@ -56,6 +56,10 @@ of use from `CDN`:
 </html>
 ```
 
+## Documentation
+
+Read about `Html.js` usage in the [Metro UI](https://docs-new.metroui.org.ua/libraries/html) documentation.
+
 ## Support
 
 If you like this project, please consider supporting it by:

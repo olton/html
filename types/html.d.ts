@@ -1,7 +1,7 @@
 // Type definitions for Html.js
 // Project: https://github.com/olton/Html
 
-declare module "html" {
+declare module "@olton/html" {
   /**
    * Options for HTML elements
    */
