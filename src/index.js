@@ -1,7 +1,7 @@
 import {BaseElement, Tag, SingleTag} from "./elements/core/index.js"
 import {render} from "./render/index.js"
 import {addStyle, addCssRule, createStyleSheet, createStyleElement} from "./style/index.js"
-import {cssLoader, viewLoader, clearViewStorageHolder, jsLoader} from "./loaders/index.js"
+import {cssLoader, jsLoader} from "./loaders/index.js"
 import * as Elements from "./elements/index.js"
 
 const __htmlSaver = {}
@@ -27,19 +27,26 @@ const restore = (ctx = globalThis) => {
 }
 
 const HTML = {
+    BaseElement,
+    Tag,
+    SingleTag,
     ...Elements,
     extract,
     restore,
 }
 
+const CSS = {
+    addStyle, 
+    addCssRule, 
+    createStyleSheet, 
+    createStyleElement,
+}
+
 export {
-    BaseElement,
-    Tag,
-    SingleTag,
     render,
-    addStyle, addCssRule, createStyleSheet, createStyleElement,
-    cssLoader, viewLoader, clearViewStorageHolder, jsLoader,
+    cssLoader, jsLoader,
+    info,
+    CSS,
     HTML,
-    info
 }
 
